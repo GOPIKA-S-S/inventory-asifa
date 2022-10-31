@@ -1,0 +1,11 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: "https://image.shutterstock.com/image-vector/smart-logistics-industry-40-inventory-260nw-1767321221.jpg";
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+background: "https://image.shutterstock.com/image-vector/smart-logistics-industry-40-inventory-260nw-1767321221.jpg";
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: "https://image.shutterstock.com/image-vector/smart-logistics-industry-40-inventory-260nw-1767321221.jpg";
+}
+    

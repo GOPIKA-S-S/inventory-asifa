@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>IMS</h1>
+        </div>
+        <ul>
+            <li><a href="/admin">Dashboard</a> </li>
+            <li><a routerLink="/product">Product</a> </li>
+            <li><a routerLink="../order">Orders</a> </li>
+            <li><a routerLink="../customer">Customer</a> </li>
+            <li><a routerLink="../login">Log out</a> </li>
+            
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                
+                <div class="user">
+                    
+                    <div class="btn-area">
+                        <label for="chkBox">ADD</label>
+                    </div>
+                    
+                    <div class="img-case">
+                      
+                    </div>
+                </div>
+                <div>
+    <input type="checkbox" name="" id="chkBox">
+    <div class="mainContnt">
+        <div class="box">
+            <div class="boxes bx1"></div>
+            <div class="boxes bx2">
+                <h3>ADD NEW ITEM</h3>
+                <form #Add="ngForm"(ngSubmit)="addprdt()" >
+                <div class="login-form">
+                    <input type="text" placeholder="Product category"[(ngModel)]="product.pcategory" name="pcategory">
+                    <input type="text" placeholder="Product name"[(ngModel)]="product.pname" name="pname">
+                    <input type="text" placeholder="Model"[(ngModel)]="product.model" name="model">
+                    <input type="text" placeholder="Price"[(ngModel)]="product.price" name="price">
+                    <input type="text" placeholder="Quantity"[(ngModel)]="product.qty" name="qty">
+                    <input type="file" placeholder="Choose an image"[(ngModel)]="product.img" name="img">
+                    <input type="submit" value="Add">
+                </div>
+                <div class="close-box">
+                    <label for="chkBox" class="box-close">X</label>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+            </div>
+        </div>
+                   
+        
+       
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent Orders</h2>
+                        
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Sl.no</th>
+                            <th scope="col">Customer name</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">qty</th>
+                            
+                          </tr>
+                        </thead>
+                    
+                        <tbody>
+                          <tr >
+                            <td>1</td>
+                            <td>Samuel</td>
+                            <td>samsung led</td>
+                            <td>15</td>
+                          </tr>
+                          <tr >
+                            <td>2</td>
+                            <td>John</td>
+                            <td>Washing Machine</td>
+                            <td>25</td>
+                          </tr>
+                          <tr >
+                            <td>1</td>
+                            <td>Raheal</td>
+                            <td>samsung led</td>
+                            <td>15</td>
+                          </tr>
+                          <tr >
+                            <td>1</td>
+                            <td>Jibin</td>
+                            <td>samsung galexy</td>
+                            <td>30</td>
+                          </tr>
+                          <tr >
+                            <td>1</td>
+                            <td>Ray</td>
+                            <td>Refregerator</td>
+                            <td>20</td>
+                          </tr>
+                         
+                          </tbody>
+                          
+                      </table>
+                            
+                          
+                            
+                </div>
+            </div>
+        </div>
+    
+</body>
+
+</html>

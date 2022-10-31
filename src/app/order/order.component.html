@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>IMS</h1>
+        </div>
+        <ul>
+            <li><a routerLink="../admin">DashBoard</a> </li>
+            <li><a routerLink="../product">Product</a> </li>
+            <li><a routerLink="../order">Orders</a> </li>
+            <li><a routerLink="../customer">Customer</a> </li>
+            <li><a routerLink="../login">Logout</a> </li>
+            
+        </ul>
+    </div>
+   
+
+<div class="container">
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          
+          
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <h3 align="center">ORDERS</h3>
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+      
+        <th scope="col">Customer name</th>
+        <th scope="col">Product</th>
+        <th scope="col">qty</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let i of data">
+      <td>{{i.sl}}</td>
+        <td>{{i.cusname}}</td>
+        <td>{{i.item}}</td>
+    
+
+        <td>{{i.qty}}</td>
+      <td><button class="btn btn-success">Approve</button></td>
+      <td><button class="btn btn-danger">Reject</button></td>
+                  
+
+    </tr>
+    </tbody>
+    
+</table>
+</div>
+  </div>
+</div>
+  </div>
+  
+
+               
+                 
+            
+       
+    
+</body>
+
+</html>

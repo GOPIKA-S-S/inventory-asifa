@@ -1,0 +1,39 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            
+            
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sl.no</th>
+        <th scope="col">Customer name</th>
+        <th scope="col">Product</th>
+        <th scope="col">Date</th>
+        <th scope="col">Qty</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let i of data">
+        <td>{{i.sl}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.item}}</td>
+        <td>{{i.date}}</td>
+
+        <td>{{i.qty}}</td>
+
+        
+        <td><button class="btn btn-danger"><a routerLink="../invoicedesign">View</a></button></td>
+      </tr>
+      </tbody>
+      
+  </table>
+  </div>
+    </div>
+</div>
+    </div>
+    

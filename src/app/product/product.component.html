@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>IMS</h1>
+        </div>
+        <ul>
+            <li><a routerLink="../admin">DashBoard</a> </li>
+            <li><a routerLink="../product">Product</a> </li>
+            <li><a routerLink="../order">Orders</a> </li>
+            <li><a routerLink="../customer">Customer</a> </li>
+            <li><a routerLink="../login">Log out</a> </li>
+            
+        </ul>
+    </div>
+   
+
+<div class="container">
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          
+          
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <h3 align="center">PRODUCT</h3>
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Qty</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let i of data">
+      <td>
+       
+          <div *ngIf="i.isEdit">
+            <input type="text" name="prdtcat" class="form-control" [(ngModel)]="i.pcategory">
+          </div>
+          <div *ngIf="!i.isEdit">
+            {{i.pcategory}}
+          </div>
+        {{i.pcategory}}</td>
+
+      <td>
+        <div *ngIf="i.isEdit">
+          <input type="text" name="prdtname" class="form-control" [(ngModel)]="i.pname">
+        </div>
+        <div *ngIf="!i.isEdit">
+          {{i.pname}}
+        </div>
+        {{i.pname}}</td>
+
+      <td>
+        <div *ngIf="i.isEdit">
+          <input type="text" name="prdtprice" class="form-control" [(ngModel)]="i.price">
+        </div>
+        <div *ngIf="!i.isEdit">
+          {{i.price}}
+        </div>
+        {{i.price}}</td>
+
+      <td>
+        <div *ngIf="i.isEdit">
+          <input type="text" name="prdtqty" class="form-control" [(ngModel)]="i.qty">
+        </div>
+        <div *ngIf="!i.isEdit">
+          {{i.qty}}
+        </div>
+        {{i.qty}}</td>
+        
+      <td><button class="btn btn-success" (click)="onEdit(i)">Edit</button></td>
+      <td><button class="btn btn-danger"(click)="Deleteprdt(i)">Delete</button></td>      
+    </tr>
+
+    </tbody>
+    
+</table>
+</div>
+<div *ngIf="i.isEdit">
+  <table class="g-3">
+    <tr>
+      <td><button class="btn btn-primary" (click)="Updatedriver(i)">save</button></td>
+      &nbsp;
+      <td> <button class="btn btn-danger" (click)="i.isEdit = false">cancel</button></td>
+    </tr>
+  </table>
+</div>
+
+  </div>
+</div>
+  </div>
+  
+
+               
+                 
+            
+       
+    
+</body>
+
+</html>
