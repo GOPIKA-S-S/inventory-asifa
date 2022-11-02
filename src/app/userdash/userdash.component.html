@@ -3,7 +3,7 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Inventorymanag</title>
+  <title>Inventorymanagement</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Boxicons CDN link-->
@@ -25,15 +25,15 @@
     
     
     <li>
-      <a href="#">
+      <a href="/userdash">
         <i class='bx bx-package' ></i>
         <span class="logo_name"><a routerLink="../mycart">My Cart</a></span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="/userdash">
         <i class='bx bx-cart-add'></i>
-        <span class="logo_name"><a routerLink="../invoice">Invoice</a></span>
+        <span class="logo_name"><a routerLink="../invoiceuser">Invoice</a></span>
       </a>
     </li>
     
@@ -42,10 +42,10 @@
     
    
     <li class="log_out">
-      <a href="#">
+      
         <i class='bx bx-log-out' ></i>
-        <span class="logo_name">Log out</span>
-      </a>
+        <span class="logo_name"><a routerLink="../login">Log out</a></span>
+      
     </li>
 </ul>
   </div>
@@ -57,22 +57,42 @@
   <hr>
   <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
     <div class="row">
+      <form #product="ngForm">
       <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
         <div class="card" >
           <div class="card-body">
-            <img src="..." >
+            <img src="{{i.img}}" >
             <p>Name:{{i.pname}}</p>
             <p>Category:{{i. pcategory}}</p>
-            <p>Model:{{i.model}}</p>
-            <p>Quantity:{{i.qty}}</p>
-            <p>Color:{{i.color}}</p>
-            <p>Price:{{i.price}}</p>
-            <a class="btn btn-primary">Add to cart</a>
+            <p>price:{{i. price}}</p>
+            <div>
+            <div *ngIf="!i.isedit">
+              <input  type="text" name="totname"  [(ngModel)]="i.totprice">
+            </div>
+            <div *ngIf="i.isedit">
+              <input  type="text" name="tottname"  [value]="i.totprice">
+            </div>
+          </div>
+            
+           
+            
+              <p>qty</p>
+              <p>
+              
+              <input type="number" name="quatity" [(ngModel)]="quantity">
+             
+              <button class="btn-danger" (click)="total(i)">done</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+            <button class="btn-primary">Order</button>
+          </p>
           </div>
         </div>
       </div>
+    </form>
     </div>
+    
   </div>
+  
 </div>  
       </section>
       

@@ -29,27 +29,8 @@ export class ProductComponent implements OnInit {
   onEdit(item:any){
     item.isEdit=true
   }
-  Deleteprdt(datas:any){
-    this.api.deleteprdt(datas._id).subscribe(
-      (data)=>{
-         console.log(data);
-         this.data = this.data.filter((u:any)=>u!==datas)
-      }
-    )
-
-  }
-  Updateprdt(i:any){
-    
-    console.log()
-    this.api.updateprdt(i).subscribe(
-      (data)=>{
-        console.log(data)
-        window.location.reload()
-      }
-      
-    )
-
-  }
+ 
+ 
 
 
   data:any=[

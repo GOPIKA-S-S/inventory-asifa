@@ -1,7 +1,63 @@
-<div class="Cart-Container">
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <title>Inventorymanagement</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Boxicons CDN link-->
+   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+<body style="background-color:white">
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-cart-add'> </i>
+   <span class="logo_name">Inventory</span>
+   </div>
+   <ul class="nav-link">
+    <li>
+      <a href="/userdash">
+        <i class='bx bx-grid-alt'></i>
+        <span class="logo_name">Dashboard</span>
+      </a>
+    </li>
+    
+    
+    <li>
+      <a href="/userdash">
+        <i class='bx bx-package' ></i>
+        <span class="logo_name"><a routerLink="../mycart">My Cart</a></span>
+      </a>
+    </li>
+    <li>
+      <a href="/userdash">
+        <i class='bx bx-cart-add'></i>
+        <span class="logo_name"><a routerLink="../invoiceuser">Invoice</a></span>
+      </a>
+    </li>
+    
+    
+    
+    
+   
+    <li class="log_out">
+      
+        <i class='bx bx-log-out' ></i>
+        <span class="logo_name"><a routerLink="../login">Log out</a></span>
+      
+    </li>
+</ul>
+  </div>
+<!--home-content-->
+<section class="home-section">
+ 
+<div class="container " >
+  <h2>Dashboard</h2>
+  <div class="Cart-Container">
     <div class="Header">
       <h3 class="Heading">my cart</h3>
-      <h5 class="Action">Remove all</h5>
+      
       </div>
       <div class="Cart-Items">
         <div class="image-box">
@@ -11,18 +67,16 @@
         <h5 class="card-text">Galaxy Tab S8 (Wi-Fi)</h5>
         <h5>Pink Gold 128GB</h5>
       
-        
         </div>
         <div class="counter">
-          <div class="btn">+</div>
+
           <div class="count">2</div>
-          <div class="btn">-</div>
+          
           </div>
         
         <div class="prices">
           <div class="amount">₹53,999</div>
-   <div class="save"><u>Save for later</u></div>
-   <div class="remove"><u>Remove</u></div>
+   
         </div>
         </div>
         <div class="Cart-Items">
@@ -36,15 +90,14 @@
           
           </div>
           <div class="counter">
-            <div class="btn">+</div>
+
             <div class="count">2</div>
-            <div class="btn">-</div>
+            
             </div>
           
           <div class="prices">
             <div class="amount">₹29,999</div>
-     <div class="save"><u>Save for later</u></div>
-     <div class="remove"><u>Remove</u></div>
+     
           </div>
           </div>
           <div class="Cart-Items">
@@ -58,16 +111,23 @@
             
             </div>
             <div class="counter">
-              <div class="btn">+</div>
+              
               <div class="count">2</div>
-              <div class="btn">-</div>
+              
               </div>
             
             <div class="prices">
               <div class="amount">₹26,998</div>
-       <div class="save"><u>Save for later</u></div>
-       <div class="remove"><u>Remove</u></div>
+       
             </div>
             </div>
         
   </div>
+         
+</div>  
+      </section>
+      
+            
+</body>
+</html>
+
